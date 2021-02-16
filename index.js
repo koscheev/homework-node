@@ -44,11 +44,15 @@ let concatenateArray = lodash.concat(data1, data2)
 console.log(concatenateArray);
 
 // Task 3
-const copyArray = lodash.pick(data2[1], 'name', 'email')
+const copyArray = lodash.omit(data2[1], 'age')
 console.log(copyArray);
 
 
 // Task 4
-delete data2[1].age
-let newArray = data2[1]
-console.log(newArray);
+const a = {
+  "age": 21,
+  "name": "Leta Lee",
+  "email": "leta.lee@qnekt.com",
+}
+const {age, ...noAge} = a
+console.log(noAge);
